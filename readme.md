@@ -9,6 +9,6 @@ To use the transpiler clone the repository to your local machine. Edit
 within the root of the project. IR code will be placed in '/path/to/output'.
 
 If you are into compiler/interpreter design, check out the links below 
-to the resources I found very useful durin the making of this project.
+to the resources I found very useful during the making of this project.
 
 TODO: Add links here.
