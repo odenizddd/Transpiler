@@ -1,2 +1,3 @@
 *.o
 advcalc
+.DS_Store
