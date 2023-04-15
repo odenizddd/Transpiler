@@ -24,8 +24,9 @@ int StrExists(char * char_pointer, StrInt map){
 
 char *getString(ASTNode * node, AstStr map){
     for (int i = 0; i < map.count ; i++){
-        // Return the ASTNode if they are equal.
-        // Is there a function which returns whether two ASTNodes are equal to each other?
+        if ((& map.ASTMap[i]) == (& node)){
+            return map.string[i];
+        }
     }
 }
 
@@ -35,8 +36,9 @@ void setString(int index, char * value, AstStr map){
 
 int ASTExists(ASTNode * node, AstStr map){
     for (int i = 0; i < map.count ; i++){
-        // Return 0 if they are equal.
-        // Is there a function which returns whether two ASTNodes are equal to each other?
+        if ((& map.ASTMap[i]) == (& node)){
+            return 0;
+        }
     }
     return -1;
 }
