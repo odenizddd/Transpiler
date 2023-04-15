@@ -20,11 +20,11 @@ typedef struct{
 extern AstStr astStr;
 
 int getInt(char *);
-void setInt(int, int);
+void setInt(char *, int);
 int StrExists(char *);
 
 char *getString(ASTNode *);
-void setString(int, char *);
+void setString(ASTNode *, char *);
 int ASTExists(ASTNode *);
 
 #endif
