@@ -3,26 +3,26 @@
 
 #include "Parser.h"
 
-struct StrInt{
+static struct StrInt{
     char *string[512];
     int IntMap[512];
     int count;  
 };
-typedef struct StrInt StrInt;
+static struct StrInt StrInt;
 
-struct AstStr{
+static struct AstStr{
     ASTNode *ASTMap[512];
     char *string[512];
     int count;
 };
-typedef struct AstStr AstStr;
+static struct AstStr AstStr;
 
-int getInt(char *, StrInt);
-void setInt(int, int, StrInt);
-int StrExists(char *, StrInt);
+int getInt(char *);
+void setInt(int, int);
+int StrExists(char *);
 
-char *getString(ASTNode *, AstStr);
-void setString(int, char *, AstStr);
-int ASTExists(ASTNode *, AstStr);
+char *getString(ASTNode *);
+void setString(int, char *);
+int ASTExists(ASTNode *);
 
 #endif
