@@ -1,21 +1,24 @@
 #include "map.h"
 
+StrInt strInt = {.count = 0};
+AstStr astStr = {.count = 0};
+
 int getInt(char * char_pointer){
-    for (int i = 0; i < StrInt.count; i++){
-        if (strcmp(char_pointer, StrInt.string[i]) == 0){
-            return StrInt.IntMap[i];
+    for (int i = 0; i < strInt.count; i++){
+        if (strcmp(char_pointer, strInt.string[i]) == 0){
+            return strInt.IntMap[i];
         }
     }
     return -1;
 }
 
 void setInt(int index, int value){
-    StrInt.IntMap[index] = value;
+    strInt.IntMap[index] = value;
 }
 
 int StrExists(char * char_pointer){
-    for (int i = 0; i < StrInt.count; i++){
-        if (strcmp(char_pointer, StrInt.string[i]) == 0){
+    for (int i = 0; i < strInt.count; i++){
+        if (strcmp(char_pointer, strInt.string[i]) == 0){
             return 0;
         }
     }
@@ -23,21 +26,21 @@ int StrExists(char * char_pointer){
 }
 
 char *getString(ASTNode * node){
-    for (int i = 0; i < AstStr.count ; i++){
-        if (AstStr.ASTMap[i] == node){
-            return AstStr.string[i];
+    for (int i = 0; i < astStr.count ; i++){
+        if (astStr.ASTMap[i] == node){
+            return astStr.string[i];
         }
     }
     return -1;
 }
 
 void setString(int index, char * value){
-    AstStr.string[index] = value;
+    astStr.string[index] = value;
 }
 
 int ASTExists(ASTNode * node){
-    for (int i = 0; i < AstStr.count ; i++){
-        if (AstStr.ASTMap[i] == node){
+    for (int i = 0; i < astStr.count ; i++){
+        if (astStr.ASTMap[i] == node){
             return 0;
         }
     }
