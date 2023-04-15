@@ -12,8 +12,12 @@ int getInt(char * char_pointer){
     return -1;
 }
 
-void setInt(int index, int value){
-    strInt.IntMap[index] = value;
+void setInt(char * char_pointer, int value){
+    for (int i = 0; i < strInt.count; i++){
+        if (strcmp(char_pointer, strInt.string[i]) == 0){
+            strInt.IntMap[i] = value;
+        }
+    }    
 }
 
 int StrExists(char * char_pointer){
@@ -34,8 +38,12 @@ char *getString(ASTNode * node){
     return -1;
 }
 
-void setString(int index, char * value){
-    astStr.string[index] = value;
+void setString(ASTNode * node, char * value){
+    for (int i = 0; i < astStr.count ; i++){
+        if (astStr.ASTMap[i] == node){
+            astStr.string[i] = value;
+        }
+    }
 }
 
 int ASTExists(ASTNode * node){
