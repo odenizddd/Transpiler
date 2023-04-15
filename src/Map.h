@@ -3,19 +3,21 @@
 
 #include "Parser.h"
 
-static struct StrInt{
+typedef struct{
     char *string[512];
     int IntMap[512];
     int count;  
-};
-static struct StrInt StrInt;
+} StrInt;
 
-static struct AstStr{
+extern StrInt strInt;
+
+typedef struct{
     ASTNode *ASTMap[512];
     char *string[512];
     int count;
-};
-static struct AstStr AstStr;
+} AstStr;
+
+extern AstStr astStr;
 
 int getInt(char *);
 void setInt(int, int);
