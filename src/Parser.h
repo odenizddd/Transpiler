@@ -2,6 +2,7 @@
 #define PARSER_H
 
 #include "Lexer.h"
+#include "Map.h"
 
 typedef enum {
     PRIMARY = 0,
@@ -28,6 +29,7 @@ ASTNode* term();
 ASTNode* factor();
 ASTNode* primary();
 void show(ASTNode* node);
+char * createTempVariable(int value);
 int eval(ASTNode* node);
 
 #endif
