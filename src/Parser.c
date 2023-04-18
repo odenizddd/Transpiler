@@ -119,6 +119,14 @@ void show(ASTNode* node) {
     }else {}
 }
 
+char * createTempVariable(int value){
+    char sign[256] = "%";
+    char number[256];
+    sprintf(number, "%d", value);
+    strcat(sign, number);
+    return sign;
+}
+
 int eval(ASTNode* node) {
     if(node->tokentype == PLUS) {
         return eval(node->left) + eval(node->right);
